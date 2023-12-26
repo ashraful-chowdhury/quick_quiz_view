@@ -1,7 +1,7 @@
 name: quick_quiz_view
-description: "A new Flutter package project."
+description: "A customizable and easy-to-use Flutter package for displaying quizzes with multiple-choice questions."
 version: 0.0.1
-homepage:
+homepage: https://github.com/ashraful-chowdhury/quick_quiz_view
 
 environment:
   sdk: '>=3.2.0 <4.0.0'
