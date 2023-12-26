@@ -52,6 +52,8 @@ class MyApp extends StatelessWidget {
 }
 ```
 
+for more details please check the example [Quiz Screen](https://github.com/ashraful-chowdhury/quick_quiz_view/blob/main/example/lib/quiz_screen.dart)
+
 ## Features
 
 - Supports a customizable title and four multiple-choice options.
