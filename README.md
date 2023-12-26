@@ -1,40 +1,70 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# QuickQuizView Flutter Package
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+A customizable and easy-to-use Flutter package for displaying quizzes with multiple-choice questions. The QuickQuizView package is designed to simplify the implementation of quiz screens in Flutter applications. It provides a simple widget for users to select options, navigate between questions, and submit their answers.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+## Installation
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+To use this package, add `quick_quiz_view` as a dependency in your `pubspec.yaml` file.
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```yaml
+dependencies:
+  quick_quiz_view: ^1.0.0
+ ```
+Then, run:
+```bash
+$ flutter pub get
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+import 'package:flutter/material.dart';
+import 'package:quick_quiz_view/quick_quiz_view.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: QuickQuizView(
+          title: 'Example Quiz',
+          option1: 'Option A',
+          option2: 'Option B',
+          option3: 'Option C',
+          option4: 'Option D',
+          onOptionSelected: (value) {
+            print('Selected option: $value');
+          },
+          onNextPressed: () {
+            print('Next button pressed');
+          },
+          onPreviousPressed: () {
+            print('Previous button pressed');
+          },
+        ),
+      ),
+    );
+  }
+}
 ```
 
-## Additional information
+## Features
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
-# quick_quiz_view
+- Supports a customizable title and four multiple-choice options.
+- Automatically manages the state of selected options.
+- Provides callbacks for handling user interactions such as selecting options and navigating between questions.
+- Styled with a light amber background for a pleasant user experience.
+
+## Todo
+- [-] Image support for quiz
+- [-] Fully customizable widgets
+
+## Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/ashraful-chowdhury/quick_quiz_view/blob/main/LICENSE) file for details.
