@@ -8,7 +8,7 @@ To use this package, add `quick_quiz_view` as a dependency in your `pubspec.yaml
 
 ```yaml
 dependencies:
-  quick_quiz_view: ^0.0.1
+  quick_quiz_view: ^0.0.2
  ```
 Then, run:
 ```bash
